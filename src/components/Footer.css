@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'NanumGothic-Regular';
+    src: local('NanumGothic-Regular');
+}
+
+.Footer-wrapper {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    padding-left: 250px;
+    padding-right: 180px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'NanumGothic-Regular';
+    color: #aaa;
+}
+
+.Footer-insta-name {
+    color: #aaaaaa;
+    font-size: 11px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.Footer-insta-name img {
+    width: 15px;
+    padding-right: 5px;
+}
+
+.Footer-insta-img img {
+    height: 175px;
+    padding-top: 2px;
+    padding-left: 5px
+}
+
+.Footer-seller {
+    padding-top: 100px;
+}
+
+.Footer-seller-information {
+    line-height: 20px;
+    padding: 25px 0px;
+}

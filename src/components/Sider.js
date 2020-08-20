@@ -5,7 +5,7 @@ const Sider = () => {
   return (
     <div className="Sider-wrap">
       <div className="Sider-title">
-        <div className="Sider-title-name">Daily Men</div>
+        <div className="Sider-title-name">Daily Man</div>
       </div>
       <div className="Sider-content">
         <div className="Sider-personal">
