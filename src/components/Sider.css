@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: local('OpenSans-Light');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.Sider-wrap {
+    width: 210px;
+    padding-top: 90px;
+    padding-left: 50px;
+    font-family: 'OpenSans-Light';
+
+}
+
+.Sider-title-name {
+    width: 130px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 3px;
+    border-bottom: 2px solid;
+}
+
+.Sider-content {
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #101010;
+}
+
+.Sider-personal {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.Sider-personal div {
+    padding-right: 10px;
+}
+
+.Sider-product-category>ul>li {
+    list-style: none;
+    padding-bottom: 8px
+}
+
+.Sider-additional-category {
+    padding-top: 40px;
+}
+
+.Sider-additional-category>ul>li {
+    list-style: none;
+    padding-bottom: 8px
+}
