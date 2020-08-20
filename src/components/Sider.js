@@ -26,7 +26,7 @@ const Sider = () => {
             <li>SHOES</li>
             <li>BAG & ACC</li>
             <li>SALE</li>
-            <li>Codi Set</li>
+            <li>CodI Set</li>
             <li>Promotion</li>
           </ul>
         </div>

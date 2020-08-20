@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: local('OpenSans-Light');
+}
+
+.Header-wrapper {
+    width: 1300px;
+    padding-top: 177px;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'OpenSans-Light';
+}
+
+.Header-category {
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.Header-category>li {
+    list-style: none;
+    padding-left: 20px;
+
+}
