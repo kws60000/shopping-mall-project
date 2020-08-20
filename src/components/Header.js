@@ -13,7 +13,6 @@ const Header = () => {
         <li>고객센터</li>
         <li>이벤트</li>
         <li>리뷰</li>
-        <li>리뷰</li>
       </div>
     </div>
   );
