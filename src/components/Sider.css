@@ -9,10 +9,11 @@
 }
 
 .Sider-wrap {
-    width: 210px;
+    width: 315px;
     padding-top: 90px;
     padding-left: 50px;
     font-family: 'OpenSans-Light';
+    position: fixed;
 
 }
 
