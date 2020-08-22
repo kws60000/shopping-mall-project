@@ -18,7 +18,13 @@
     justify-content: flex-end;
 }
 
-.Header-category>li {
+.Header-category-list {
     list-style: none;
     padding-left: 20px;
+
+}
+
+.Header-category-link {
+    text-decoration: none;
+    color: black;
 }
