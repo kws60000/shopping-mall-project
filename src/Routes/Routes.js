@@ -1,9 +1,9 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import MainPage from "./pages/MainPage";
-import AddPage from "./pages/AddPage";
-import ChargePage from "./pages/ChargePage";
-import ListPage from "./pages/ListPage";
+import MainPage from "./MainPage/MainPage";
+import AddPage from "./AddPage/AddPage";
+import ChargePage from "./ChargePage/ChargePage";
+import ListPage from "./ListPage/ListPage";
 
 const Routes = () => {
   return (

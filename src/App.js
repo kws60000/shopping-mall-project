@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import Routes from "./Routes";
+import Routes from "./Routes/Routes";
 import Sider from "./components/Sider";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -14,9 +14,7 @@ function App() {
         <Sider />
         <div>
           <Header />
-
           <Routes />
-
           <Footer />
         </div>
       </div>
