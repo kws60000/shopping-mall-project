@@ -8,33 +8,6 @@ const MainPage = () => {
         <div className="MainPage-item">
           <img
             className="MainPage-item-img"
-            src="https://instagram.fcju1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/117153843_2618271671757450_1942597701969431709_n.jpg?_nc_ht=instagram.fcju1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=SMVAsdPx8fEAX9cmPXh&oh=a6d1a984f6589b299bacffccfce6dd9c&oe=5F686B0E"
-            alt="Main"
-          ></img>
-          <div className="MainPage-item-name">TR 2웨이 오픈 카라 셔츠</div>
-          <div className="MainPage-item-price">30,000원</div>
-        </div>
-        <div className="MainPage-item">
-          <img
-            className="MainPage-item-img"
-            src="https://scontent-frx5-1.cdninstagram.com/v/t51.29350-15/117726508_659947221361642_5676228711017363031_n.jpg?_nc_cat=100&_nc_sid=8ae9d6&_nc_ohc=ZtCFyYJOH_MAX-wv-70&_nc_ht=scontent-frx5-1.cdninstagram.com&oh=3c4e58ea544773405b9439e6bed4e4a6&oe=5F61A88B"
-            alt="Main"
-          ></img>
-          <div className="MainPage-item-name">오버핏 거즈 린넨 셔츠</div>
-          <div className="MainPage-item-price">30,000원</div>
-        </div>
-        <div className="MainPage-item">
-          <img
-            className="MainPage-item-img"
-            src="https://scontent-frt3-1.cdninstagram.com/v/t51.29350-15/116870891_225795675317320_342931733160931216_n.jpg?_nc_cat=106&_nc_sid=8ae9d6&_nc_ohc=SIKdkhaYLTwAX87yOaw&_nc_ht=scontent-frt3-1.cdninstagram.com&oh=4cd692705f1986e769f3e8cfd29bb530&oe=5F64FB13"
-            alt="Main"
-          ></img>
-          <div className="MainPage-item-name">린넨면 차이나 체크 셔츠</div>
-          <div className="MainPage-item-price">30,000원</div>
-        </div>
-        <div className="MainPage-item">
-          <img
-            className="MainPage-item-img"
             src="https://scontent-frt3-1.cdninstagram.com/v/t51.29350-15/117723093_656417834976438_5487288218449441304_n.jpg?_nc_cat=108&_nc_sid=8ae9d6&_nc_ohc=0NI22SNQNnwAX81Q4TE&_nc_ht=scontent-frt3-1.cdninstagram.com&oh=dccfaab6b1e79f16dac695c7f2d87685&oe=5F61736F"
             alt="Main"
           ></img>
@@ -57,6 +30,33 @@ const MainPage = () => {
             alt="Main"
           ></img>
           <div className="MainPage-item-name">애쉬 거즈 코튼 셔츠</div>
+          <div className="MainPage-item-price">30,000원</div>
+        </div>
+        <div className="MainPage-item">
+          <img
+            className="MainPage-item-img"
+            src="https://instagram.fcju1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/117153843_2618271671757450_1942597701969431709_n.jpg?_nc_ht=instagram.fcju1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=SMVAsdPx8fEAX9cmPXh&oh=a6d1a984f6589b299bacffccfce6dd9c&oe=5F686B0E"
+            alt="Main"
+          ></img>
+          <div className="MainPage-item-name">TR 2웨이 오픈 카라 셔츠</div>
+          <div className="MainPage-item-price">30,000원</div>
+        </div>
+        <div className="MainPage-item">
+          <img
+            className="MainPage-item-img"
+            src="https://scontent-frx5-1.cdninstagram.com/v/t51.29350-15/117726508_659947221361642_5676228711017363031_n.jpg?_nc_cat=100&_nc_sid=8ae9d6&_nc_ohc=ZtCFyYJOH_MAX-wv-70&_nc_ht=scontent-frx5-1.cdninstagram.com&oh=3c4e58ea544773405b9439e6bed4e4a6&oe=5F61A88B"
+            alt="Main"
+          ></img>
+          <div className="MainPage-item-name">오버핏 거즈 린넨 셔츠</div>
+          <div className="MainPage-item-price">30,000원</div>
+        </div>
+        <div className="MainPage-item">
+          <img
+            className="MainPage-item-img"
+            src="https://scontent-frt3-1.cdninstagram.com/v/t51.29350-15/116870891_225795675317320_342931733160931216_n.jpg?_nc_cat=106&_nc_sid=8ae9d6&_nc_ohc=SIKdkhaYLTwAX87yOaw&_nc_ht=scontent-frt3-1.cdninstagram.com&oh=4cd692705f1986e769f3e8cfd29bb530&oe=5F64FB13"
+            alt="Main"
+          ></img>
+          <div className="MainPage-item-name">린넨면 차이나 체크 셔츠</div>
           <div className="MainPage-item-price">30,000원</div>
         </div>
       </div>
