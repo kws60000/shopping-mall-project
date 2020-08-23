@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Sider.css";
 
 const Sider = () => {
   return (
     <div className="Sider-wrap">
       <div className="Sider-title">
-        <div className="Sider-title-name">Daily Man</div>
+        <Link to="/" className="Sider-title-link">
+          <div className="Sider-title-name">Daily Man</div>
+        </Link>
       </div>
       <div className="Sider-content">
         <div className="Sider-personal">

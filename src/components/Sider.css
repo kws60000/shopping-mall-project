@@ -18,11 +18,16 @@
 }
 
 .Sider-title-name {
+    color: black;
     width: 130px;
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 3px;
     border-bottom: 2px solid;
+}
+
+.Sider-title-link {
+    text-decoration: none;
 }
 
 .Sider-content {
