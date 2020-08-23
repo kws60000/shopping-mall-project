@@ -1,7 +1,7 @@
 import React from "react";
 
 const MainPage = () => {
-  return <div>MainPage</div>;
+  return <div>MainPage 풀리퀘 확인</div>;
 };
 
 export default MainPage;
