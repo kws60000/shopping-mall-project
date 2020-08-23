@@ -4,11 +4,11 @@ import "./ListPage.css";
 const ListPage = () => {
   return (
     <div className="ListPage-wrapper">
-      <div className="ListPage-title">구매내역 조회</div>
+      <div className="ListPage-title">Purchase List</div>
       <div className="ListPage-container">
         <div className="ListPage-container-category">
-          <div className="ListPage-container-category-name">상품정보</div>
-          <div className="ListPage-container-category-price">주문금액</div>
+          <div className="ListPage-container-category-name">Name</div>
+          <div className="ListPage-container-category-price">Price</div>
         </div>
         <div className="ListPage-container-content">
           <img
@@ -30,6 +30,15 @@ const ListPage = () => {
           <div className="ListPage-container-content-name">
             애쉬 거즈 코튼 셔츠
           </div>
+          <div className="ListPage-container-content-price">30,000원</div>
+        </div>
+        <div className="ListPage-container-content">
+          <img
+            className="ListPage-container-content-img"
+            alt="ListPage"
+            src="https://scontent-frt3-1.cdninstagram.com/v/t51.29350-15/118154029_1683083388511967_719520518651958381_n.jpg?_nc_cat=102&_nc_sid=8ae9d6&_nc_ohc=I_rOhiFbt7kAX8ujArQ&_nc_ht=scontent-frt3-1.cdninstagram.com&oh=4c9b457a597bd3ec74c41a51866fc47d&oe=5F682AED"
+          ></img>
+          <div className="ListPage-container-content-name">겨자 셔츠</div>
           <div className="ListPage-container-content-price">30,000원</div>
         </div>
       </div>
