@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'NanumGothic-Regular', 'OpenSans-Light';
+    src: local(OpenSans-Light);
+    src: local(NanumGothic-Regular);
+}
+
+.AddPage-wrapper {
+    font-family: 'NanumGothic-Regular';
+    padding-top: 100px;
+    padding-left: 550px;
+    padding-right: 200px;
+    text-align: center;
+}
+
+.AddPage-title {
+    font-family: 'OpenSans-Light';
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding-bottom: 23px;
+}
+
+.AddPage-container {
+    border: 2px solid;
+    padding-bottom: 25px;
+}
+
+.AddPage-container-button {
+    font-family: 'OpenSans-Light';
+    letter-spacing: 1px;
+    background-color: white;
+    color: black;
+    border: 0px;
+    margin-top: 25px;
+}
+
+.AddPage-container-img {
+    width: 450px;
+}
+
+.AddPage-container-text {
+    text-align: center;
+    border-top: 1px gray;
+    border-left: 1px gray;
+    border-right: 1px gray;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.AddPage-container-file {
+    width: 73px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
