@@ -1,10 +1,23 @@
 import React from "react";
+import { connect } from "react-redux";
 import "./MainPage.css";
 
-const MainPage = () => {
+const MainPage = (productAdd) => {
   return (
     <div className="MainPage-wrapper">
       <div className="MainPage-container">
+        {productAdd.map((product) => (
+          <div className="MainPage-item">
+            <img
+              className="MainPage-item-img"
+              src={product.image}
+              alt={product.image}
+            ></img>
+            <div className="MainPage-item-name">{product.name}</div>
+            <div className="MainPage-item-price">{product.price}</div>
+          </div>
+        ))}
+
         <div className="MainPage-item">
           <img
             className="MainPage-item-img"
@@ -64,4 +77,12 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+const mapStateToProps = (state) => {
+  return {
+    name: state.name,
+    price: state.price,
+    image: state.image,
+  };
+};
+
+export default connect(mapStateToProps)(MainPage);
