@@ -9,6 +9,8 @@ export const saleAdd = ({ price, image, name }) => ({
   name,
   price,
 });
+
+// 상품목록을 제거하는 액션 생성함수를 생성
 export const saleDelete = (id) => ({
   type: PRODUCTDELETE,
   id,

@@ -1,9 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./MainPage.css";
+import { saleDelete } from "../../modules/productAdd";
 
 // 상품 목록을 추가하는 리듀서를 가져옴
-const MainPage = ({ productAdd }) => {
+const MainPage = ({ productAdd, handleDeleteProduct }) => {
   return (
     <div className="MainPage-wrapper">
       <div className="MainPage-container">
@@ -20,7 +21,12 @@ const MainPage = ({ productAdd }) => {
                 <div className="MainPage-item-price">{product.price}</div>
               </div>
 
-              <button className="MainPage-item-button">BUY NOW</button>
+              <button
+                className="MainPage-item-button"
+                onClick={() => handleDeleteProduct(product.id)}
+              >
+                BUY NOW
+              </button>
             </div>
           </div>
         ))}
@@ -37,5 +43,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-//
-export default connect(mapStateToProps)(MainPage);
+// store에서 액션을 가져오고, id를 받은 액션이 결과값을 반환하는 함수를 만듦
+const mapDispatchToProp = (dispatch) => ({
+  handleDeleteProduct: (id) => dispatch(saleDelete(id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProp)(MainPage);
