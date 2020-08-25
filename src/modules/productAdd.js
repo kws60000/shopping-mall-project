@@ -1,5 +1,6 @@
 // 액션 타입을 정의
 export const PRODUCTADD = "productAdd/PRODUCTADD";
+export const PRODUCTDELETE = "productAdd/PRODUCTDELETE";
 
 // 상품목록을 추가하는 액션 생성함수를 생성
 export const saleAdd = ({ price, image, name }) => ({
@@ -7,6 +8,10 @@ export const saleAdd = ({ price, image, name }) => ({
   image,
   name,
   price,
+});
+export const saleDelete = (id) => ({
+  type: PRODUCTDELETE,
+  id,
 });
 
 // 추가될 id 값 설정
@@ -72,6 +77,10 @@ export default function productAdd(state = initialState, action) {
           image: action.image,
         },
       ];
+    // 등록 상품 제거 액션
+    case PRODUCTDELETE:
+      const nextState = state.filter((product) => product.id !== action.id);
+      return nextState;
 
     // 반환할 초기값
     default:
