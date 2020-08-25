@@ -23,7 +23,9 @@ const MainPage = ({ productAdd, handleDeleteProduct }) => {
 
               <button
                 className="MainPage-item-button"
-                onClick={() => handleDeleteProduct(product.id)}
+                onClick={() => {
+                  handleDeleteProduct(product.id);
+                }}
               >
                 BUY NOW
               </button>

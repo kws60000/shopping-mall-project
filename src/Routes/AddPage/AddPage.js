@@ -80,7 +80,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
   onClickProductAdd: ({ name, price, image }) =>
     // 상품 목록을 추가하는 액션을 실행함
-
     dispatch(saleAdd({ name, price, image })),
 });
 

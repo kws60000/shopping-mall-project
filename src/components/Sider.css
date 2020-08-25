@@ -41,7 +41,11 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
+}
+
+.Sider-personal-point {
+    padding-bottom: 40px;
 }
 
 .Sider-personal div {
