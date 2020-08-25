@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'NanumGothic-Regular', 'OpenSans-Light';
+    src: local(OpenSans-Light);
+    src: local(NanumGothic-Regular);
+}
+
+.ListPage-wrapper {
+    font-family: 'NanumGothic-Regular';
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 600px;
+    padding-right: 300px;
+}
+
+.ListPage-title {
+    font-family: 'OpenSans-Light';
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.ListPage-container {
+    border: 2px solid;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.ListPage-container-category {
+    border-bottom: 1px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+}
+
+.ListPage-container-content {
+    display: flex;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-top: 1px groove;
+    align-items: center;
+}
+
+.ListPage-container-category-name {
+    width: 50%;
+    text-align: center;
+}
+
+.ListPage-container-category-price {
+    width: 50%;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.ListPage-container-content-img {
+    width: 10%;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+.ListPage-container-content-name {
+    width: 37%;
+    font-weight: 600;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.ListPage-container-content-price {
+    width: 50%;
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-align: center;
+}

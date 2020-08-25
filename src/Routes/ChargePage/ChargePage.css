@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'NanumGothic-Regular', 'OpenSans-Light';
+    src: local(OpenSans-Light);
+    src: local(NanumGothic-Regular);
+}
+
+.ChargePage-wrapper {
+    font-family: 'NanumGothic-Regular';
+    padding-top: 100px;
+    padding-left: 700px;
+    padding-right: 350px;
+    text-align: center;
+}
+
+.ChargePage-title {
+    font-family: 'OpenSans-Light';
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding-bottom: 23px;
+}
+
+.ChargePage-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 2px solid;
+}
+
+.ChargePage-container-input {
+    border-top: 1px gray;
+    border-left: 1px gray;
+    border-right: 1px gray;
+    padding-bottom: 3px;
+    width: 80px;
+    text-align: center;
+
+}
+
+.ChargePage-container-button {
+    border: 0px;
+    padding-left: 30px;
+    background-color: white;
+}
