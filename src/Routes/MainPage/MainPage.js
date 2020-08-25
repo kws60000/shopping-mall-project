@@ -8,14 +8,20 @@ const MainPage = ({ productAdd }) => {
     <div className="MainPage-wrapper">
       <div className="MainPage-container">
         {productAdd.map((product) => (
-          <div className="MainPage-item">
+          <div className="MainPage-item" key={product.id}>
             <img
               className="MainPage-item-img"
               src={product.image}
               alt={product.image}
             ></img>
-            <div className="MainPage-item-name">{product.name}</div>
-            <div className="MainPage-item-price">{product.price}</div>
+            <div className="MainPage-item-footer">
+              <div>
+                <div className="MainPage-item-name">{product.name}</div>
+                <div className="MainPage-item-price">{product.price}</div>
+              </div>
+
+              <button className="MainPage-item-button">BUY NOW</button>
+            </div>
           </div>
         ))}
       </div>

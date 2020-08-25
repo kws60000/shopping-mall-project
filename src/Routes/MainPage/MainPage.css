@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'NanumGothic-Regular';
+    font-family: 'OpenSans-Light';
     src: local(NanumGothic-Regular);
+    src: local(OpenSans-Light);
 }
 
 .MainPage-wrapper {
-    padding-left: 250px;
+    padding-left: 310px;
     padding-top: 100px
 }
 
 .MainPage-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     padding-left: 80px;
-
 }
 
 .MainPage-item {
@@ -24,6 +24,22 @@
 .MainPage-item-img {
     width: 363px;
 
+}
+
+.MainPage-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 5px;
+}
+
+.MainPage-item-button {
+    font-family: 'OpenSans-Light';
+    letter-spacing: 1px;
+    color: #191919;
+    background-color: #DDDDDD;
+    border: 0px;
+    padding: 12px 10px;
 }
 
 .MainPage-item-name {

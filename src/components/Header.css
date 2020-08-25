@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OpenSans-Light';
-    src: local('OpenSans-Light');
+    src: local(OpenSans-Light);
 }
 
 .Header-wrapper {
