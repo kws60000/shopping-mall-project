@@ -1,6 +1,6 @@
 // 액션 타입을 정의
-export const PRODUCTADD = "productAdd/PRODUCTADD";
-export const PRODUCTDELETE = "productAdd/PRODUCTDELETE";
+const PRODUCTADD = "productAdd/PRODUCTADD";
+const PRODUCTDELETE = "productAdd/PRODUCTDELETE";
 
 // 상품목록을 추가하는 액션 생성함수를 생성
 export const saleAdd = ({ price, image, name }) => ({
