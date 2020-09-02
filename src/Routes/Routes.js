@@ -4,6 +4,7 @@ import MainPage from "./MainPage/MainPage";
 import AddPage from "./AddPage/AddPage";
 import ChargePage from "./ChargePage/ChargePage";
 import ListPage from "./ListPage/ListPage";
+import ProductRoute from "./ProductPage/ProductRoute";
 
 const Routes = () => {
   return (
@@ -12,6 +13,7 @@ const Routes = () => {
       <Route path="/Add" component={AddPage} />
       <Route path="/Charge" component={ChargePage} />
       <Route path="/List" component={ListPage} />
+      <Route path="/Product" component={ProductRoute} />
     </Switch>
   );
 };
