@@ -5,7 +5,10 @@ const Product2 = () => {
     <div>
       <div className="ProductPage-wrapper">
         <div className="ProductPage-left">
-          <img src="https://scontent-frt3-1.cdninstagram.com/v/t51.29350-15/117405195_300900951137178_2554164909463545302_n.jpg?_nc_cat=104&_nc_sid=8ae9d6&_nc_ohc=qAQctj5Ic8MAX8zqymo&_nc_ht=scontent-frt3-1.cdninstagram.com&oh=bc0b262233bf9aa2b70ab58a5fdf782f&oe=5F638233"></img>
+          <img
+            src="https://scontent-frt3-1.cdninstagram.com/v/t51.29350-15/117405195_300900951137178_2554164909463545302_n.jpg?_nc_cat=104&_nc_sid=8ae9d6&_nc_ohc=qAQctj5Ic8MAX8zqymo&_nc_ht=scontent-frt3-1.cdninstagram.com&oh=bc0b262233bf9aa2b70ab58a5fdf782f&oe=5F638233"
+            alt="Product"
+          ></img>
         </div>
         <div className="ProductPage-Right">
           <div className="ProductPage-name">

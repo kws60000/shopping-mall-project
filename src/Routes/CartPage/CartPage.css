@@ -1,0 +1,67 @@
+.CartPage-wrapper {
+    padding-top: 100px;
+    padding-left: 550px;
+    padding-right: 250px;
+}
+
+table {
+    width: 850px;
+    border: 2 px solid rgb(200, 200, 200);
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid #dfdfdf;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+td {
+    color: #707070;
+    text-align: center;
+
+}
+
+th {
+    color: #353535;
+}
+
+.CartPage-header {
+    text-align: center;
+}
+
+.CartPage-content-image img {
+    width: 100px;
+}
+
+.CartPage-content-color {
+
+    display: flex;
+}
+
+.CartPage-content-size {
+    display: flex;
+}
+
+.CartPage-container-sum {
+    background-color: #fbfafa;
+}
+
+.CartPage-footer {
+    text-align: center;
+}
+
+.CartPage-footer button {
+    border: 1px solid #ddd;
+    height: 40px;
+    width: 95px;
+
+    font-size: 12px;
+    color: #191919;
+}
+
+.CartPage-footer-delete {
+    background-color: white;
+}
