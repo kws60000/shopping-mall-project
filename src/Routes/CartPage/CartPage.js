@@ -4,7 +4,7 @@ import "./CartPage.css";
 const CartPage = () => {
   return (
     <div className="CartPage-wrapper">
-      <div className="CartPage-header">CART</div>
+      <div className="CartPage-header">Cart</div>
       <table className="CartPage-container">
         <tr className="CartPage-container-category">
           <th>
@@ -27,14 +27,13 @@ const CartPage = () => {
             ></img>
           </td>
           <td className="CartPage-content-name">
-            <div>플라이 슬림 컷팅 진</div>
-            <div className="CartPage-content-color">
-              <div className="CartPage-content-color-left">색상</div>
-              <div className="CartPage-content-color-right">진청</div>
+            <div className="CartPage-content-productName">
+              플라이 슬림 컷팅 진
             </div>
-            <div className="CartPage-content-size">
-              <div className="CartPage-content-size-left">사이즈</div>
-              <div className="CartPage-content-size-right">L</div>
+            <div className="CartPage-content-option">
+              [옵션:
+              <div className="CartPage-content-color">진청</div>/
+              <div className="CartPage-content-size">L</div>]
             </div>
           </td>
           <td className="CartPage-content-price">30000</td>
