@@ -16,6 +16,7 @@ const MainPage = ({ productAdd, handleDeleteProduct, handleDownPrice }) => {
               src={product.image}
               alt={product.image}
             ></img>
+
             <div className="MainPage-item-footer">
               <div>
                 <div className="MainPage-item-name">{product.name}</div>

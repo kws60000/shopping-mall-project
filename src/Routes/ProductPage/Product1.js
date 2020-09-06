@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Product1 = () => {
+  const [color, setColor] = useState("");
+  const [size, setSize] = useState("");
+  const [number, setNumber] = useState("");
+
+  const onChangeColor = (e) => {
+    setColor(e.target.value);
+  };
+  const onChangeSize = (e) => {
+    setSize(e.target.value);
+  };
+  const onChangeNumber = (e) => {
+    setNumber(e.target.value);
+  };
+
   return (
     <div className="ProductPage-wrapper">
       <div className="ProductPage-left">
@@ -21,7 +35,11 @@ const Product1 = () => {
         <div className="ProductPage-color">
           <div className="ProductPage-Right-category">컬러</div>
           <div>
-            <select name="color" className="color-select">
+            <select
+              name="color"
+              className="color-select"
+              onChange={onChangeColor}
+            >
               <option value="">[필수] 색상을 선택하세요</option>
               <option value="진청">진청</option>
               <option value="연청">연청</option>
@@ -31,7 +49,7 @@ const Product1 = () => {
         <div className="ProductPage-size">
           <div className="ProductPage-Right-category">사이즈</div>
           <div>
-            <select name="size" className="size-select">
+            <select name="size" className="size-select" onChange={onChangeSize}>
               <option value="">[필수] 사이즈를 선택하세요</option>
               <option value="S">S</option>
               <option value="M">M</option>
@@ -47,9 +65,11 @@ const Product1 = () => {
               type="number"
               className="many-input"
               placeholder="수량을 선택하세요"
+              onChange={onChangeNumber}
             />
           </div>
         </div>
+        [{color}/{size}/{number}]
         <div className="ProductPage-Buy">
           <button className="ProductPage-Buy-Button">BUY NOW</button>
         </div>
