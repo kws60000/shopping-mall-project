@@ -1,7 +1,8 @@
 import React from "react";
 import "./CartPage.css";
+import { connect } from "react-redux";
 
-const CartPage = () => {
+const CartPage = ({ cartAdd }) => {
   return (
     <div className="CartPage-wrapper">
       <div className="CartPage-header">Cart</div>
@@ -16,30 +17,28 @@ const CartPage = () => {
           <th>수량</th>
           <th>합계</th>
         </tr>
-        <tr className="CartPage-container-content">
-          <td className="CartPage-content-checkbox">
-            <input type="checkbox"></input>
-          </td>
-          <td className="CartPage-content-image">
-            <img
-              src="https://scontent-frt3-1.cdninstagram.com/v/t51.29350-15/117723093_656417834976438_5487288218449441304_n.jpg?_nc_cat=108&_nc_sid=8ae9d6&_nc_ohc=0NI22SNQNnwAX81Q4TE&_nc_ht=scontent-frt3-1.cdninstagram.com&oh=dccfaab6b1e79f16dac695c7f2d87685&oe=5F61736F"
-              alt="Product"
-            ></img>
-          </td>
-          <td className="CartPage-content-name">
-            <div className="CartPage-content-productName">
-              플라이 슬림 컷팅 진
-            </div>
-            <div className="CartPage-content-option">
-              [옵션:
-              <div className="CartPage-content-color">진청</div>/
-              <div className="CartPage-content-size">L</div>]
-            </div>
-          </td>
-          <td className="CartPage-content-price">30000</td>
-          <td className="CartPage-content-many">2</td>
-          <td className="CartPage-content-total">60000</td>
-        </tr>
+        {cartAdd.map((product) => (
+          <tr className="CartPage-container-content">
+            <td className="CartPage-content-checkbox">
+              <input type="checkbox"></input>
+            </td>
+            <td className="CartPage-content-image">
+              <img src={product.image} alt="Product"></img>
+            </td>
+            <td className="CartPage-content-name">
+              <div className="CartPage-content-productName">{product.name}</div>
+              <div className="CartPage-content-option">
+                [옵션:
+                <div className="CartPage-content-color">{product.color}</div>/
+                <div className="CartPage-content-size">{product.size}</div>]
+              </div>
+            </td>
+            <td className="CartPage-content-price">{product.price}</td>
+            <td className="CartPage-content-many">{product.many}</td>
+            <td className="CartPage-content-total">60000</td>
+          </tr>
+        ))}
+
         <tr className="CartPage-container-sum">
           <td colSpan="6">60000</td>
         </tr>
@@ -52,4 +51,8 @@ const CartPage = () => {
   );
 };
 
-export default CartPage;
+const mapStateToProps = (state) => {
+  return { cartAdd: state.cartAdd };
+};
+
+export default connect(mapStateToProps)(CartPage);
