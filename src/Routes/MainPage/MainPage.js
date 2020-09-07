@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import "./MainPage.css";
 import { saleDelete } from "../../modules/productAdd";
 import { pointMinus } from "../../modules/pointAdd";
@@ -11,11 +12,13 @@ const MainPage = ({ productAdd, handleDeleteProduct, handleDownPrice }) => {
       <div className="MainPage-container">
         {productAdd.map((product) => (
           <div className="MainPage-item" key={product.id}>
-            <img
-              className="MainPage-item-img"
-              src={product.image}
-              alt={product.image}
-            ></img>
+            <Link to={`Product/${product.id}`}>
+              <img
+                className="MainPage-item-img"
+                src={product.image}
+                alt={product.image}
+              ></img>
+            </Link>
 
             <div className="MainPage-item-footer">
               <div>
