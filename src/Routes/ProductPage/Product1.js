@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { cartInsert } from "../../modules/cartAdd";
 
-const Product1 = () => {
+const Product1 = ({ onClickCartAdd }) => {
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
-  const [number, setNumber] = useState("");
+  const [many, setMany] = useState("");
 
   const onChangeColor = (e) => {
     setColor(e.target.value);
@@ -12,7 +14,7 @@ const Product1 = () => {
     setSize(e.target.value);
   };
   const onChangeNumber = (e) => {
-    setNumber(e.target.value);
+    setMany(e.target.value);
   };
 
   return (
@@ -38,6 +40,7 @@ const Product1 = () => {
             <select
               name="color"
               className="color-select"
+              value={color}
               onChange={onChangeColor}
             >
               <option value="">[필수] 색상을 선택하세요</option>
@@ -49,7 +52,12 @@ const Product1 = () => {
         <div className="ProductPage-size">
           <div className="ProductPage-Right-category">사이즈</div>
           <div>
-            <select name="size" className="size-select" onChange={onChangeSize}>
+            <select
+              name="size"
+              className="size-select"
+              value={size}
+              onChange={onChangeSize}
+            >
               <option value="">[필수] 사이즈를 선택하세요</option>
               <option value="S">S</option>
               <option value="M">M</option>
@@ -65,20 +73,37 @@ const Product1 = () => {
               type="number"
               className="many-input"
               placeholder="수량을 선택하세요"
+              value={many}
               onChange={onChangeNumber}
             />
           </div>
         </div>
-        [{color}/{size}/{number}]
         <div className="ProductPage-Buy">
           <button className="ProductPage-Buy-Button">BUY NOW</button>
         </div>
         <div className="ProductPage-Pocket">
-          <button className="ProductPage-Pocket-Button">CART</button>
+          <button
+            className="ProductPage-Pocket-Button"
+            onClick={() => {
+              onClickCartAdd({ color, size, many });
+            }}
+          >
+            CART
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Product1;
+const mapStateToProps = (state) => {
+  return { cartAdd: state.cartAdd };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onClickCartAdd: ({ color, size, many }) =>
+      dispatch(cartInsert({ color, size, many })),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product1);
