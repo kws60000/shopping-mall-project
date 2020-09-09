@@ -20,6 +20,19 @@ const Product1 = ({ onClickCartAdd, productAdd }) => {
   const name = productAdd.map((product) => product.name)[0];
   const image = productAdd.map((product) => product.image)[0];
   const price = productAdd.map((product) => product.price)[0];
+
+  const cartAdd = () => {
+    if (color === "") {
+      alert("색상을 선택해주세요");
+    } else if (size === "") {
+      alert("사이즈를 선택해주세요");
+    } else if (many === "") {
+      alert("수량을 선택해주세요");
+    } else {
+      onClickCartAdd({ name, image, price, color, size, many });
+    }
+  };
+
   // productAdd 리듀서의 초깃값 중 [0]번 째 index의 name, image, price를 가져옵니다
 
   return (
@@ -80,7 +93,7 @@ const Product1 = ({ onClickCartAdd, productAdd }) => {
           <button
             className="ProductPage-Pocket-Button"
             onClick={() => {
-              onClickCartAdd({ name, image, price, color, size, many });
+              cartAdd();
             }}
           >
             CART
