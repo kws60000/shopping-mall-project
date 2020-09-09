@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { cartInsert } from "../../modules/cartAdd";
 
-const Product1 = ({ onClickCartAdd }) => {
+const Product1 = ({ onClickCartAdd, productAdd }) => {
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
   const [many, setMany] = useState("");
@@ -13,26 +13,28 @@ const Product1 = ({ onClickCartAdd }) => {
   const onChangeSize = (e) => {
     setSize(e.target.value);
   };
-  const onChangeNumber = (e) => {
+  const onChangeMany = (e) => {
     setMany(e.target.value);
   };
+
+  const name = productAdd.map((product) => product.name)[0];
+  const image = productAdd.map((product) => product.image)[0];
+  const price = productAdd.map((product) => product.price)[0];
+  // productAdd 리듀서의 초깃값 중 [0]번 째 index의 name, image, price를 가져옵니다
 
   return (
     <div className="ProductPage-wrapper">
       <div className="ProductPage-left">
-        <img
-          src="https://scontent-frt3-1.cdninstagram.com/v/t51.29350-15/117723093_656417834976438_5487288218449441304_n.jpg?_nc_cat=108&_nc_sid=8ae9d6&_nc_ohc=0NI22SNQNnwAX81Q4TE&_nc_ht=scontent-frt3-1.cdninstagram.com&oh=dccfaab6b1e79f16dac695c7f2d87685&oe=5F61736F"
-          alt="Product"
-        ></img>
+        <img src={image} alt="Product"></img>
       </div>
       <div className="ProductPage-Right">
         <div className="ProductPage-name">
           <div className="ProductPage-Right-category">상품명</div>
-          <div className="ProductPage-category-text">플라이 슬림 컷팅 진</div>
+          <div className="ProductPage-category-text">{name}</div>
         </div>
         <div className="ProductPage-price">
           <div className="ProductPage-Right-category">판매가</div>
-          <div className="ProductPage-category-text">30000</div>
+          <div className="ProductPage-category-text">{price}</div>
         </div>
         <div className="ProductPage-color">
           <div className="ProductPage-Right-category">컬러</div>
@@ -40,7 +42,6 @@ const Product1 = ({ onClickCartAdd }) => {
             <select
               name="color"
               className="color-select"
-              value={color}
               onChange={onChangeColor}
             >
               <option value="">[필수] 색상을 선택하세요</option>
@@ -52,12 +53,7 @@ const Product1 = ({ onClickCartAdd }) => {
         <div className="ProductPage-size">
           <div className="ProductPage-Right-category">사이즈</div>
           <div>
-            <select
-              name="size"
-              className="size-select"
-              value={size}
-              onChange={onChangeSize}
-            >
+            <select name="size" className="size-select" onChange={onChangeSize}>
               <option value="">[필수] 사이즈를 선택하세요</option>
               <option value="S">S</option>
               <option value="M">M</option>
@@ -73,8 +69,7 @@ const Product1 = ({ onClickCartAdd }) => {
               type="number"
               className="many-input"
               placeholder="수량을 선택하세요"
-              value={many}
-              onChange={onChangeNumber}
+              onChange={onChangeMany}
             />
           </div>
         </div>
@@ -85,7 +80,7 @@ const Product1 = ({ onClickCartAdd }) => {
           <button
             className="ProductPage-Pocket-Button"
             onClick={() => {
-              onClickCartAdd({ color, size, many });
+              onClickCartAdd({ name, image, price, color, size, many });
             }}
           >
             CART
@@ -97,12 +92,15 @@ const Product1 = ({ onClickCartAdd }) => {
 };
 
 const mapStateToProps = (state) => {
-  return { cartAdd: state.cartAdd };
+  return {
+    cartAdd: state.cartAdd,
+    productAdd: state.productAdd,
+  };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    onClickCartAdd: ({ color, size, many }) =>
-      dispatch(cartInsert({ color, size, many })),
+    onClickCartAdd: ({ name, image, price, color, size, many }) =>
+      dispatch(cartInsert({ name, image, price, color, size, many })),
   };
 };
 

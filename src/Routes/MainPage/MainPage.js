@@ -12,7 +12,7 @@ const MainPage = ({ productAdd, handleDeleteProduct, handleDownPrice }) => {
       <div className="MainPage-container">
         {productAdd.map((product) => (
           <div className="MainPage-item" key={product.id}>
-            <Link to={`Product/${product.id}`}>
+            <Link to={`product/${product.id}`}>
               <img
                 className="MainPage-item-img"
                 src={product.image}

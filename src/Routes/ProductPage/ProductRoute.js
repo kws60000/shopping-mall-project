@@ -12,12 +12,12 @@ const ProductRoute = () => {
   return (
     <div>
       <Switch>
-        <Route path="/Product/1" component={Product1} />
-        <Route path="/Product/2" component={Product2} />
-        <Route path="/Product/3" component={Product3} />
-        <Route path="/Product/4" component={Product4} />
-        <Route path="/Product/5" component={Product5} />
-        <Route path="/Product/6" component={Product6} />
+        <Route path="/product/1" component={Product1} />
+        <Route path="/product/2" component={Product2} />
+        <Route path="/product/3" component={Product3} />
+        <Route path="/product/4" component={Product4} />
+        <Route path="/product/5" component={Product5} />
+        <Route path="/product/6" component={Product6} />
       </Switch>
     </div>
   );

@@ -23,29 +23,24 @@ const CartPage = ({ cartAdd }) => {
               <input type="checkbox"></input>
             </td>
             <td className="CartPage-content-image">
-              <img
-                src="https://scontent-frt3-1.cdninstagram.com/v/t51.29350-15/117723093_656417834976438_5487288218449441304_n.jpg?_nc_cat=108&_nc_sid=8ae9d6&_nc_ohc=0NI22SNQNnwAX81Q4TE&_nc_ht=scontent-frt3-1.cdninstagram.com&oh=dccfaab6b1e79f16dac695c7f2d87685&oe=5F61736F"
-                alt="Product"
-              ></img>
+              <img src={cart.image} alt="Product"></img>
             </td>
             <td className="CartPage-content-name">
-              <div className="CartPage-content-productName">
-                플라이 슬림 컷팅 진
-              </div>
+              <div className="CartPage-content-productName">{cart.name}</div>
               <div className="CartPage-content-option">
                 [옵션:
                 <div className="CartPage-content-color">{cart.color}</div>/
                 <div className="CartPage-content-size">{cart.size}</div>]
               </div>
             </td>
-            <td className="CartPage-content-price">30000</td>
+            <td className="CartPage-content-price">{cart.price}</td>
             <td className="CartPage-content-many">{cart.many}</td>
-            <td className="CartPage-content-total">60000</td>
+            <td className="CartPage-content-total">{cart.price * cart.many}</td>
           </tr>
         ))}
 
         <tr className="CartPage-container-sum">
-          <td colSpan="6">60000</td>
+          <td colSpan="6">1000000</td>
         </tr>
       </table>
       <div className="CartPage-footer">

@@ -1,7 +1,10 @@
 const CARTADD = "cartAdd/CARTADD";
 
-export const cartInsert = ({ color, size, many }) => ({
+export const cartInsert = ({ name, image, price, color, size, many }) => ({
   type: CARTADD,
+  name,
+  image,
+  price,
   color,
   size,
   many,
@@ -16,8 +19,11 @@ export default function cartAdd(state = [], action) {
         ...state,
         {
           id: id++,
-          size: action.size,
+          name: action.name,
+          image: action.image,
+          price: action.price,
           color: action.color,
+          size: action.size,
           many: action.many,
         },
       ];
