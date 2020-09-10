@@ -18,7 +18,7 @@ const Header = () => {
         <Link to="/Add" className="Header-category-link">
           <div className="Header-category-list">상품 등록</div>
         </Link>
-        <Link to="/Cart" className="Header-category-link">
+        <Link to="/cart" className="Header-category-link">
           <div className="Header-category-list">장바구니</div>
         </Link>
 

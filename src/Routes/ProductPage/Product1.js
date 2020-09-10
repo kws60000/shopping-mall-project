@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { cartInsert } from "../../modules/cartAdd";
+import { useHistory } from "react-router-dom";
 
 const Product1 = ({ onClickCartAdd, productAdd }) => {
   const [color, setColor] = useState("");
@@ -20,6 +21,9 @@ const Product1 = ({ onClickCartAdd, productAdd }) => {
   const name = productAdd.map((product) => product.name)[0];
   const image = productAdd.map((product) => product.image)[0];
   const price = productAdd.map((product) => product.price)[0];
+  // productAdd 리듀서의 초깃값 중 [0]번 째 index의 name, image, price를 가져옵니다
+
+  const history = useHistory();
 
   const cartAdd = () => {
     if (color === "") {
@@ -30,10 +34,24 @@ const Product1 = ({ onClickCartAdd, productAdd }) => {
       alert("수량을 선택해주세요");
     } else {
       onClickCartAdd({ name, image, price, color, size, many });
-    }
-  };
+      // 옵션(색상, 사이즈, 수량)을 선택했을 시 장바구니에 정보를 추가
 
-  // productAdd 리듀서의 초깃값 중 [0]번 째 index의 name, image, price를 가져옵니다
+      const confirmCart = window.confirm(
+        "선택하신 상품을 장바구니에 담았습니다\n지금 장바구니를 확인하시겠습니까?"
+      );
+      // 장바구니로 이동할지 이용자가 확인하는 함수 선언
+
+      if (confirmCart === true) {
+        history.push("/cart");
+      } else {
+        return;
+      }
+
+      // Confirm 창에서 동의를 누를 시 장바구니 페이지로 이동
+    }
+
+    // 장바구니에 추가를 클릭 시 진행하는 이벤트
+  };
 
   return (
     <div className="ProductPage-wrapper">

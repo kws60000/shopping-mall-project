@@ -1,4 +1,5 @@
 const CARTADD = "cartAdd/CARTADD";
+const CARTTOGGLE = "cartAdd/CARTTOGGLE";
 
 export const cartInsert = ({ name, image, price, color, size, many }) => ({
   type: CARTADD,
@@ -9,6 +10,12 @@ export const cartInsert = ({ name, image, price, color, size, many }) => ({
   size,
   many,
 });
+
+export const toggleCheck = (id) => ({
+  type: CARTTOGGLE,
+  id,
+});
+// 장바구니의 체크박스를 클릭 시 id 값을 받는 액션 생성 함수
 
 let id = 1;
 
@@ -24,9 +31,21 @@ export default function cartAdd(state = [], action) {
           price: action.price,
           color: action.color,
           size: action.size,
-          many: action.many,
+          completed: false,
         },
       ];
+
+    case CARTTOGGLE:
+      // 장바구니에서 체크한 상품의 체크상태를 반환하는 액션
+
+      return state.map(
+        (product) =>
+          product.id === action.id
+            ? { ...product, completed: !product.completed }
+            : product
+
+        // 체크한 상품의 체크 상태를 반전 / 체크하지 않은 상품은 그대로 유지
+      );
 
     default:
       return state;

@@ -15,7 +15,7 @@ const Routes = () => {
       <Route path="/Charge" component={ChargePage} />
       <Route path="/List" component={ListPage} />
       <Route path="/Product" component={ProductRoute} />
-      <Route path="/Cart" component={CartPage} />
+      <Route path="/cart" component={CartPage} />
     </Switch>
   );
 };

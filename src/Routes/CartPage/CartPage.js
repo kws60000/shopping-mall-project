@@ -1,8 +1,23 @@
 import React from "react";
 import "./CartPage.css";
 import { connect } from "react-redux";
+import { toggleCheck } from "../../modules/cartAdd";
 
-const CartPage = ({ cartAdd }) => {
+const CartPage = ({ cartAdd, onClickToggle }) => {
+  /*
+  const [toggle, setToggle] = useState(false);
+
+  const onChangeToggle = () => {
+    if (toggle === false) {
+      setToggle(true);
+      console.log(toggle);
+    } else {
+      setToggle(false);
+      console.log(toggle);
+    }
+  };
+  */
+
   return (
     <div className="CartPage-wrapper">
       <div className="CartPage-header">Cart</div>
@@ -20,7 +35,12 @@ const CartPage = ({ cartAdd }) => {
         {cartAdd.map((cart) => (
           <tr className="CartPage-container-content" key={cart.id}>
             <td className="CartPage-content-checkbox">
-              <input type="checkbox"></input>
+              <input
+                type="checkbox"
+                onClick={() => {
+                  onClickToggle(cart.id);
+                }}
+              ></input>
             </td>
             <td className="CartPage-content-image">
               <img src={cart.image} alt="Product"></img>
@@ -55,4 +75,10 @@ const mapStateToProps = (state) => {
   return { cartAdd: state.cartAdd };
 };
 
-export default connect(mapStateToProps)(CartPage);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onClickToggle: (id) => dispatch(toggleCheck(id)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartPage);
