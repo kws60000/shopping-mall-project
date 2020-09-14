@@ -2,21 +2,14 @@ import React from "react";
 import "./CartPage.css";
 import { connect } from "react-redux";
 import { toggleCheck } from "../../modules/cartAdd";
+import { cartDelete } from "../../modules/cartAdd";
 
-const CartPage = ({ cartAdd, onClickToggle }) => {
-  /*
-  const [toggle, setToggle] = useState(false);
+const CartPage = ({ cartAdd, onClickToggle, onClickDelete }) => {
+  const completed = cartAdd.map((cart) => cart.completed);
 
-  const onChangeToggle = () => {
-    if (toggle === false) {
-      setToggle(true);
-      console.log(toggle);
-    } else {
-      setToggle(false);
-      console.log(toggle);
-    }
+  const completedDelete = () => {
+    onClickDelete(completed);
   };
-  */
 
   return (
     <div className="CartPage-wrapper">
@@ -64,8 +57,18 @@ const CartPage = ({ cartAdd, onClickToggle }) => {
         </tr>
       </table>
       <div className="CartPage-footer">
-        <button className="CartPage-footer-order">선택상품주문</button>
-        <button className="CartPage-footer-delete">선택상품삭제</button>
+        <div>
+          <button className="CartPage-footer-order">선택상품주문</button>
+
+          <button
+            className="CartPage-footer-delete"
+            onClick={() => {
+              completedDelete();
+            }}
+          >
+            선택상품삭제
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -78,6 +81,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onClickToggle: (id) => dispatch(toggleCheck(id)),
+    onClickDelete: (completed) => dispatch(cartDelete(completed)),
   };
 };
 
