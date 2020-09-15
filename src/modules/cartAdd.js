@@ -36,6 +36,7 @@ export default function cartAdd(state = [], action) {
           name: action.name,
           image: action.image,
           price: action.price,
+          many: action.many,
           color: action.color,
           size: action.size,
           completed: false,

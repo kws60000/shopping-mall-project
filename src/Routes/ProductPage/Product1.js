@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { cartInsert } from "../../modules/cartAdd";
 import { useHistory } from "react-router-dom";
 
-const Product1 = ({ onClickCartAdd, productAdd }) => {
+import { cartInsert } from "../../modules/cartAdd";
+import { pointMinus } from "../../modules/pointAdd";
+
+const Product1 = ({ onClickCartAdd, productAdd, onClickPointMinus }) => {
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
   const [many, setMany] = useState("");
@@ -51,6 +53,28 @@ const Product1 = ({ onClickCartAdd, productAdd }) => {
     }
 
     // 장바구니에 추가를 클릭 시 진행하는 이벤트
+  };
+
+  const pointDes = () => {
+    if (color === "") {
+      alert("색상을 선택해주세요");
+    } else if (size === "") {
+      alert("사이즈를 선택해주세요");
+    } else if (many === "") {
+      alert("수량을 선택해주세요");
+    } else {
+      const confirmBuy = window.confirm(
+        `선택하신 상품의 가격은 ${
+          price * parseInt(many)
+        } 입니다. 구매하시겠습니까?`
+      );
+
+      if (confirmBuy === true) {
+        onClickPointMinus({ price, many });
+      } else {
+        return;
+      }
+    }
   };
 
   return (
@@ -105,7 +129,14 @@ const Product1 = ({ onClickCartAdd, productAdd }) => {
           </div>
         </div>
         <div className="ProductPage-Buy">
-          <button className="ProductPage-Buy-Button">BUY NOW</button>
+          <button
+            className="ProductPage-Buy-Button"
+            onClick={() => {
+              pointDes();
+            }}
+          >
+            BUY NOW
+          </button>
         </div>
         <div className="ProductPage-Pocket">
           <button
@@ -126,12 +157,15 @@ const mapStateToProps = (state) => {
   return {
     cartAdd: state.cartAdd,
     productAdd: state.productAdd,
+    pointAdd: state.pointAdd,
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
     onClickCartAdd: ({ name, image, price, color, size, many }) =>
       dispatch(cartInsert({ name, image, price, color, size, many })),
+    onClickPointMinus: ({ price, point, many }) =>
+      dispatch(pointMinus({ price, point, many })),
   };
 };
 

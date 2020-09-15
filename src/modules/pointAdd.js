@@ -6,11 +6,11 @@ export const pointPlus = (point) => ({
   point,
 });
 
-export const pointMinus = (id, price, point) => ({
+export const pointMinus = ({ price, point, many }) => ({
   type: POINTDOWN,
-  id,
   price,
   point,
+  many,
 });
 
 let array = [];
@@ -41,8 +41,11 @@ export default function pointAdd(state = [{ point: 0 }], action) {
 
     // 포인트를 사용하는 경우의 액션타입
     case POINTDOWN:
-      // 상품의 가격을 배열에 넣어 준다.
-      array.push(action.price);
+      const total = action.price * action.many;
+      // 총 가격 = 가격 * 수량
+
+      // 상품의 총 가격을 배열에 넣어 준다.
+      array.push(total);
 
       // 포인트에서 가격을 빼는 리듀서
       const minusReducer = (a, c) => a - c;
