@@ -1,0 +1,78 @@
+.CartPage-wrapper {
+    padding-top: 100px;
+    padding-left: 550px;
+    padding-right: 250px;
+
+    font-family: "NanumGothic-Regular";
+}
+
+table {
+    width: 850px;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+td,
+th {
+
+    padding: 10px;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+td {
+    color: #707070;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+}
+
+th {
+    color: #353535;
+    border: 1px solid #dfdfdf;
+}
+
+.CartPage-header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    padding-bottom: 40px;
+}
+
+.CartPage-content-image img {
+    width: 100px;
+}
+
+.CartPage-content-productName {
+    font-weight: bold;
+    color: black;
+}
+
+.CartPage-content-option {
+    display: flex;
+    justify-content: center;
+}
+
+.CartPage-container-sum {
+    background-color: #fbfafa;
+}
+
+.CartPage-footer {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.CartPage-footer button {
+    border: 1px solid #ddd;
+    height: 50px;
+    width: 105px;
+
+    font-size: 13px;
+    color: #191919;
+}
+
+.CartPage-footer-delete {
+    margin-left: 20px;
+    background-color: white;
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Sider.css";
+import { connect } from "react-redux";
 
-const Sider = () => {
+const Sider = ({ pointAdd }) => {
   return (
     <div className="Sider-wrap">
       <div className="Sider-title">
@@ -12,10 +13,14 @@ const Sider = () => {
       </div>
       <div className="Sider-content">
         <div className="Sider-personal">
-          <div>LOGIN</div>
+          <div>LOGOUT</div>
           <div>MY PAGE</div>
           <div>CART</div>
         </div>
+        {pointAdd.map((my) => (
+          <div className="Sider-personal-point">POINT: {my.point}</div>
+        ))}
+
         <div className="Sider-product-category">
           <ul>
             <li>ABOUT</li>
@@ -47,4 +52,8 @@ const Sider = () => {
   );
 };
 
-export default Sider;
+const mapStateToProps = (state) => ({
+  pointAdd: state.pointAdd,
+});
+
+export default connect(mapStateToProps)(Sider);

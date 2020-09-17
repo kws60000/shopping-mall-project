@@ -18,8 +18,10 @@ const Header = () => {
         <Link to="/Add" className="Header-category-link">
           <div className="Header-category-list">상품 등록</div>
         </Link>
+        <Link to="/cart" className="Header-category-link">
+          <div className="Header-category-list">장바구니</div>
+        </Link>
 
-        <div className="Header-category-list">장바구니</div>
         <div className="Header-category-list">고객센터</div>
         <div className="Header-category-list">이벤트</div>
         <div className="Header-category-list">리뷰</div>
